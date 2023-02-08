@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albarka Delivery</title>
+
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+
+
+	<link rel="stylesheet" href="css/aos.css" />
+
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+<body>
+    
+
+<header>
+ 
+		<div class="container container-width">
+			<div class="row">
+				<div class="col-md-12">
+				<nav class="navbar navbar-expand-lg navbar-light ">
+					<a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button"
+					  data-toggle="collapse" data-target="#nav-bar">
+						<span class="sr-only"> Switch Menu </span>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="nav-bar">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="about.html">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Solutions</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Enterprise</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Ideas</a>
+							</li>
+		
+							<!-- <li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle"
+					   href="#" data-toggle="dropdown">
+									My Account
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#"> To Edit </a>
+									<a class="dropdown-item" href="#"> Logout </a>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+		
+					<div class="header-btn">
+						<a href="#"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 11C16 11.442 15.8244 11.866 15.5118 12.1785C15.1993 12.4911 14.7754 12.6667 14.3333 12.6667H4.33333L1 16V2.66667C1 2.22464 1.17559 1.80072 1.48816 1.48816C1.80072 1.17559 2.22464 1 2.66667 1H14.3333C14.7754 1 15.1993 1.17559 15.5118 1.48816C15.8244 1.80072 16 2.22464 16 2.66667V11Z" stroke="#21A9E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contact Us</a>
+					</div>
+
+				</nav>
+				</div>
+			</div>
+		</div>
+	
+</header>
+
+
+<section id="altair-404-section">
+    <div class="container max-width-container">
+    <div class="row dir-clm align-items-center justify-content-between">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="thankyou-page-content-block">
+    <h1>Thank you!</h1>
+    <p>You request has been successfully sumbited, we will be sending the confirmation soon. </p>
+    <div class="thankyou-btn-group">
+        <div class="not-page-content-btn-">
+            <a href="#">
+                <button class="btn rounded-pill pxp-section-cta">Back To Home</button>
+            </a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-7 col-7">
+    <div class="thankyou-page-content-img">
+    <img class="img-responsive" src="img/thankyou-img-01.png" alt="Thank You Image">
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+
+<!-- bootstrap library -->
+<script src="dist/js/bootstrap.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+
+<script src="js/main.js"></script>
+	
+
+
+
+<script>
+	
+    // First we detect the click event
+    $('.navbar-toggler').click(function() {
+     // Using an if statement to check the class
+     if ($('header').hasClass('active')) {
+         $('header').removeClass('active');
+     } else  {
+         $('header').addClass('active');
+     }
+ });
+ 
+ 
+ </script>
+ 
+ 
+ 
+ <script>
+       jQuery(".footer-link-item-block").click(function(){
+       jQuery(this).parent(".nav").toggleClass("open"); 
+       jQuery('html, body').animate({ scrollTop: jQuery(this).offset().top - 170 }, 1500 );
+   });
+   
+ </script>
+ <script>
+     
+ 
+ $(window).scroll(function(){
+   if ($(this).scrollTop() > 800) {
+      $('.delivery-block').addClass('active');
+   } else {
+      $('.delivery-block').removeClass('active');
+   }
+ });
+ 
+ 
+ </script>
+ 
+ 
+ 
+ <script>
+     
+ $('.delivery-block').click( function() {
+     $(".delivery--fixed").toggleClass("active");
+ } );
+ 
+ 
+    // First we detect the click event
+   $('.dl-close').click(function() {
+     // Using an if statement to check the class
+     if ($('.delivery--fixed').hasClass('active')) {
+         $('.delivery--fixed').removeClass('active');
+     } else  {
+     }
+ });
+ 
+ 
+ 
+ 
+ 
+ </script>
+ 
+ </body>
+ </html>

@@ -1,0 +1,1 @@
+<img src="{{asset($common_settings['logo'])}}" height="100%" alt="logo" class="auth-logo">

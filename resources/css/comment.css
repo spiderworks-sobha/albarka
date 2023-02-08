@@ -1,0 +1,194 @@
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+}
+
+.avatar-img,
+.avatar-initials,
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.avatar-img {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.avatar-initials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  line-height: 0;
+  background-color: #a0aec0;
+}
+
+.avatar-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #a0aec0
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23fff' d='M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z'/%3e%3c/svg%3e")
+    no-repeat center/1.75rem;
+}
+
+.avatar-indicator {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  height: 20%;
+  display: block;
+  background-color: #a0aec0;
+  border-radius: 50%;
+}
+
+.avatar-group {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.avatar-group .avatar + .avatar {
+  margin-left: -0.75rem;
+}
+
+.avatar-group .avatar:hover {
+  z-index: 1;
+}
+
+.avatar-sm,
+.avatar-group-sm > .avatar {
+  width: 2.125rem;
+  height: 2.125rem;
+  font-size: 1rem;
+  margin-right: 15px;
+}
+
+.avatar-sm .avatar-placeholder,
+.avatar-group-sm > .avatar .avatar-placeholder {
+  background-size: 1.25rem;
+}
+
+.avatar-group-sm > .avatar + .avatar {
+  margin-left: -0.53125rem;
+}
+
+.avatar-lg,
+.avatar-group-lg > .avatar {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+}
+
+.avatar-lg .avatar-placeholder,
+.avatar-group-lg > .avatar .avatar-placeholder {
+  background-size: 2.25rem;
+}
+
+.avatar-group-lg > .avatar + .avatar {
+  margin-left: -1rem;
+}
+
+.avatar-light .avatar-indicator {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+
+.avatar-group-light > .avatar {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+
+.avatar-dark .avatar-indicator {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.avatar-group-dark > .avatar {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Font not working in <textarea> for this version of bs */
+
+textarea {
+  font-family: inherit;
+}
+.bg-gray{
+  background: #f5f5f5;
+}
+.comments-cnts{
+  font-size: 14px;
+}
+.comments-cnts h5{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.comment-form h5{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0 15px;
+}
+.com-sec .form-control{
+  padding: 10px;
+}
+.com-sec textarea.form-control{
+  height: 100px;
+}
+.com-sec .btn{
+  font-size: 14px;
+  margin-top: 15px;
+  background: #05a6d7;
+  color: #fff;
+}
+.name-cntr {
+    background: #c70ef5;
+    padding: 5px;
+    height: 34px;
+    border-radius: 50%;
+    width: 34px;
+    display: block;
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+}
+.comment-rep{
+  text-align: right;
+  margin: 5px 0;
+  line-height: 14px;
+}
+.comment-rep a {
+    color: #069ae1 !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+.rep-frm-cntr{
+  padding: 15px;
+  background: #f8f9fa!important;
+  border-radius: .25rem!important;
+}
+.tag-name {
+    color: #1ca2e4;
+    margin-right: 10px;
+}
+
+.not-active{
+  padding: 1px 6px;
+  background: red;
+  margin-right: 4px;
+  color: #fff;
+  border: 1px solid red;
+  border-radius: 50%;
+  font-size: 8px;
+}
