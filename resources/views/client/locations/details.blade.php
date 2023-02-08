@@ -88,7 +88,7 @@
 
                   <div class="home-banner-selectbox" >
 							<label for="">Item to Deliver</label>
-							<select name="sources" id="sources" class="custom-select sources" placeholder="Locations">
+							<select name="sources" id="sources" class="custom-select sources" placeholder="Item to deliver">
 								<option value="a">Documents</option>
 								<option value="b">Documents</option>
 								<option value="c">Phones</option>
