@@ -8,6 +8,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
     crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
 <script src="{{asset('html/js/main.js')}}"></script>
 <script src="{{asset('html/js/aos.js')}}"></script>
 <script>
@@ -52,5 +55,25 @@ $(window).scroll(function(){
   }
 });
 
+
+</script>
+
+<script>
+/* Cut results to 4 items and trigger load more button */
+$(document).ready(function(){
+  
+  /* slice to 4 results at first load */
+  $(".accordion-block-item").slice(0, 4).show();
+  
+  /* load more */
+  $(".faq-btn-more").on("click", function(e){
+    e.preventDefault();
+    $(".accordion-block-item:hidden").slice(0, 4).fadeIn('easing');
+    if($(".accordion-block-item:hidden").length == 0) {
+      $(".faq-btn-more").hide();
+    }
+  });
+  
+});
 
 </script>

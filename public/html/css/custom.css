@@ -1660,15 +1660,11 @@ footer {
     background-color: #fff;
   }
 
-  .navbar-collapse.collapse.show {
-    position: fixed;
-    top: 70px;
-    left: 0;
+  .navbar-collapse {
     overflow: hidden;
     width: 100%;
     z-index: 0;
     background-color: #fff;
-    height: 100vh;
     padding: 30px 0;
   }
   ul.navbar-nav {
@@ -2792,7 +2788,123 @@ section#location-list-section {
 .testimony-au-img-block {
   position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.accordion-block-item {
+  display: none;
+}
+button.faq-btn-more {
+  margin-top: 20px;
+  border: 0;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  color: #000000;
+  transition: .25s;
+  position: relative;
+}
+button.faq-btn-more svg {
+  margin-left: 6px;
+}
+ul.dropdown-menu.show {
+  padding: 0;
+}
+ul.dropdown-menu.show li {
+  padding: 5px 0px;
+  transition: .25;
+}
+ul.dropdown-menu.show li:hover{
+  background-color: #ededed;
+  transition: .25;
+}
+
+.modal.left .modal-dialog, .modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  max-width: 380px;
+  height: auto;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+  top: 20%;
+}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 30px;
+	}
+
+/*Left*/
+	.modal.left.fade .modal-dialog{
+		left: -380px;
+		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+	
+	.modal.left.fade.in .modal-dialog{
+		left: 0;
+	}
+        
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -380px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+
+
+
+	
+	.modal.right.fade.show .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
+
+
+#deliverypopup .home-banner-text-block-text h3 span {
+    display: inline-block;
+    color: #21A9E1;
+}
+#deliverypopup .home-banner-text-block-text h3{
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+ul.dropdown-menu.show li a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 163%;
+  color: #626262 !important;
+  width: 100%;
+  display: block;
+}
+
 .testimony-au-img-block img {
   width: 200px;
   border-radius: 50%;
@@ -2812,6 +2924,7 @@ section#location-list-section {
 }
 .testimony-block-content-item {
   text-align: center;
+  padding: 0 20px;
 }
 .testimony-block-content-item p{
   margin-top: 20px;
@@ -3328,7 +3441,7 @@ section#altair-404-section {
 }
 
 .home-banner-selectbox {
-  z-index: 14;
+  z-index: 15;
 }
 
 .home-banner-selectbox.yourname {
@@ -3360,6 +3473,64 @@ section#footer-link--text-section {
   line-height: 28px;
   color: #9F9F9F;
 }
+
+
+.home-banner-selectbox.yourphonenumber input {
+  width: 100%;
+  position: relative;
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid #100777;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #000000;
+  padding: 10px 20px 10px 45px;
+}
+.home-banner-selectbox2 label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #666666;
+  position: absolute;
+  z-index: 10;
+  top: -14px;
+  left: 20px;
+  padding: 0 5px;
+  background-color: #fff;
+}
+.home-banner-selectbox2 {
+  position: relative;
+  margin-top: 30px;
+  z-index: 14;
+}
+.home-banner-selectbox2 svg {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(0px, -50%);
+  z-index: 8;
+}
+
+#deliverypopup .modal-content .close {
+  text-align: right;
+  padding: 15px;
+}
+
+.inner-page-2-cloum-map img {
+  width: 100%;
+}
+.inner-page-2-cloum-map {
+  margin-top: 30px;
+}
+.inner-page-2-cloum-map img {
+  width: 70%;
+}
+
 
 
 @media (max-width: 991px) {
@@ -3452,5 +3623,11 @@ section#footer-link--text-section {
   transform: translate(0px, 0px);
 }
 
+.testimony-au-img-block img {
+  width: 160px;
+  border-radius: 50%;
+  height: 160px;
+  object-fit: cover;
+}
 
 }
