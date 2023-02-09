@@ -7,3 +7,6 @@
 
 
 <link rel="stylesheet" href="{{asset('html/css/aos.css')}}" />
+
+
+<link rel="stylesheet" href="https://intl-tel-input.com/node_modules/intl-tel-input/build/css/intlTelInput.css?1549804213570">
