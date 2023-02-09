@@ -3531,7 +3531,9 @@ section#footer-link--text-section {
   width: 70%;
 }
 
-
+.iti.iti--allow-dropdown {
+  width: 100%;
+}
 
 @media (max-width: 991px) {
   .faq {

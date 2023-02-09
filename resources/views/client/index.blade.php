@@ -46,13 +46,10 @@
 									</svg>
 							</div>
 
-
 							<div class="home-banner-selectbox yourphonenumber" >
 								<label for="">Your Phone Number</label>
-								<input type="text" placeholder="Your Phone Number">
-								<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.60976C0 3.40052 3.44628 0 7.68293 0C11.9196 0 15.3659 3.40052 15.3659 7.60976C15.3659 10.2277 13.8392 12.8115 12.2212 14.6923C11.4024 15.6441 10.5333 16.4476 9.76676 17.0191C9.3841 17.3043 9.0163 17.5398 8.68431 17.7069C8.37309 17.8637 8.01768 18 7.68293 18C7.34818 18 6.99277 17.8637 6.68154 17.7069C6.34956 17.5398 5.98176 17.3043 5.59909 17.0191C4.83253 16.4476 3.96347 15.6441 3.14468 14.6923C1.52668 12.8115 0 10.2277 0 7.60976ZM7.68293 9.87805C6.22813 9.87805 5.04878 8.6987 5.04878 7.2439C5.04878 5.7891 6.22813 4.60976 7.68293 4.60976C9.13772 4.60976 10.3171 5.7891 10.3171 7.2439C10.3171 8.6987 9.13772 9.87805 7.68293 9.87805Z" fill="#00D496"/>
-									</svg>
+								<input placeholder="Your Phone Number" type="tel" id="phone" value="+91 ">
+
 							</div>
 
 
@@ -275,22 +272,11 @@
 		
 		
 								<div class="form-input-block">
-									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.1549 13.458C9.79766 14.8129 6.32181 13.5398 3.39138 10.6145C0.460949 7.68914 -0.814364 4.21932 0.542884 2.86442L1.43653 1.97233C2.05346 1.35647 3.07002 1.37275 3.70707 2.00869L5.09125 3.39046C5.7283 4.02641 5.7446 5.0412 5.12767 5.65706L4.93573 5.84867C4.60263 6.18118 4.57005 6.71759 4.87955 7.092C5.17809 7.45315 5.49993 7.81286 5.8489 8.16122C6.19786 8.50958 6.55821 8.83087 6.91998 9.12889C7.29504 9.43785 7.83238 9.40532 8.16547 9.07281L8.35742 8.8812C8.97435 8.26534 9.99091 8.28162 10.628 8.91756L12.0121 10.2993C12.6492 10.9353 12.6655 11.9501 12.0486 12.5659L11.1549 13.458Z" fill="#0F0094"/>
-										<path d="M10.1582 5.68073C9.98873 5.2681 9.73619 4.88151 9.40057 4.54646C9.08389 4.23034 8.72125 3.98806 8.3341 3.81962" stroke="#0F0094" stroke-linecap="round"/>
-										<path d="M8.33402 1.45984C9.26091 1.79505 10.1306 2.33355 10.8737 3.07536C11.6354 3.83578 12.1831 4.72896 12.5169 5.68036" stroke="#0F0094" stroke-linecap="round"/>
-										</svg>
-										
-									<input type="text" placeholder="Phone Number">
+										<input placeholder="Your Phone Number" type="tel" id="phone2" value="+91 ">
 								</div>
 		
-								<div class="form-input-block">
-									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M13.601 2.32605C12.8675 1.58573 11.9939 0.998793 11.0313 0.599454C10.0687 0.200115 9.03617 -0.00364427 7.994 4.93305e-05C3.627 4.93305e-05 0.068 3.55805 0.064 7.92605C0.064 9.32505 0.43 10.686 1.121 11.891L0 16L4.204 14.898C5.367 15.531 6.66993 15.8627 7.994 15.863H7.998C12.366 15.863 15.924 12.305 15.928 7.93305C15.929 6.89109 15.7238 5.85924 15.3243 4.89693C14.9247 3.93462 14.3397 3.06088 13.601 2.32605ZM7.994 14.521C6.813 14.5214 5.6537 14.2036 4.638 13.601L4.398 13.457L1.904 14.111L2.57 11.6781L2.414 11.427C1.75381 10.3774 1.40465 9.16208 1.407 7.92205C1.407 4.29605 4.364 1.33805 7.998 1.33805C8.86374 1.3365 9.72123 1.50632 10.521 1.83774C11.3208 2.16916 12.0471 2.65561 12.658 3.26905C13.271 3.8801 13.757 4.60647 14.0879 5.40628C14.4188 6.20609 14.5881 7.06349 14.586 7.92905C14.582 11.568 11.625 14.521 7.994 14.521ZM11.609 9.58705C11.412 9.48805 10.439 9.00905 10.256 8.94105C10.074 8.87605 9.941 8.84205 9.811 9.04005C9.678 9.23705 9.298 9.68605 9.184 9.81505C9.07 9.94805 8.952 9.96305 8.754 9.86505C8.557 9.76505 7.918 9.55705 7.162 8.88005C6.572 8.35505 6.177 7.70505 6.059 7.50805C5.945 7.31005 6.048 7.20405 6.147 7.10505C6.234 7.01705 6.344 6.87305 6.443 6.75905C6.543 6.64505 6.576 6.56105 6.641 6.42905C6.706 6.29505 6.675 6.18105 6.626 6.08205C6.576 5.98305 6.181 5.00605 6.014 4.61205C5.854 4.22305 5.691 4.27705 5.569 4.27205C5.455 4.26505 5.322 4.26505 5.189 4.26505C5.08856 4.26755 4.98973 4.29078 4.89869 4.33328C4.80766 4.37579 4.7264 4.43665 4.66 4.51205C4.478 4.71005 3.969 5.18905 3.969 6.16605C3.969 7.14305 4.679 8.08205 4.779 8.21505C4.877 8.34805 6.173 10.347 8.162 11.207C8.632 11.412 9.002 11.533 9.291 11.625C9.766 11.7771 10.195 11.754 10.537 11.705C10.917 11.647 11.708 11.225 11.875 10.762C12.039 10.298 12.039 9.90205 11.989 9.81905C11.94 9.73505 11.807 9.68605 11.609 9.58705Z" fill="#0F0094"/>
-										</svg>
-										
-										
-									<input type="text" placeholder="Whatsapp Number">
+								<div class="form-input-block">										
+									<input type="tel" id="whatsappphone" placeholder="Whatsapp Number">
 								</div>
 		
 								<div class="form-input-block">
@@ -303,7 +289,8 @@
 									<input type="text" placeholder="Location">
 								</div>
 		
-		
+								<p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+
 								<button class="submit-btn">Send message</button>
 		
 		
@@ -473,6 +460,92 @@
             });
         });
         </script>
+
+
+
+
+
+<script>
+  
+// International telephone format
+// $("#phone").intlTelInput();
+// get the country data from the plugin
+var countryData = window.intlTelInputGlobals.getCountryData(),
+  input = document.querySelector("#phone2"),
+  addressDropdown = document.querySelector("#address-country");
+
+// init plugin
+var iti = window.intlTelInput(input, {
+  hiddenInput: "full_phone",
+  utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js?1549804213570" // just for formatting/placeholders etc
+});
+
+// populate the country dropdown
+for (var i = 0; i < countryData.length; i++) {
+  var country = countryData[i];
+  var optionNode = document.createElement("option");
+  optionNode.value = country.iso2;
+  var textNode = document.createTextNode(country.name);
+  optionNode.appendChild(textNode);
+  addressDropdown.appendChild(optionNode);
+}
+// set it's initial value
+addressDropdown.value = iti.getSelectedCountryData().iso2;
+
+// listen to the telephone input for changes
+input.addEventListener('countrychange', function(e) {
+  addressDropdown.value = iti.getSelectedCountryData().iso2;
+});
+
+// listen to the address dropdown for changes
+addressDropdown.addEventListener('change', function() {
+  iti.setCountry(this.value);
+});
+</script>
+
+
+
+<script>
+  
+// International telephone format
+// $("#phone").intlTelInput();
+// get the country data from the plugin
+var countryData = window.intlTelInputGlobals.getCountryData(),
+  input = document.querySelector("#whatsappphone"),
+  addressDropdown = document.querySelector("#address-country");
+
+// init plugin
+var iti = window.intlTelInput(input, {
+  hiddenInput: "full_phone",
+  utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js?1549804213570" // just for formatting/placeholders etc
+});
+
+// populate the country dropdown
+for (var i = 0; i < countryData.length; i++) {
+  var country = countryData[i];
+  var optionNode = document.createElement("option");
+  optionNode.value = country.iso2;
+  var textNode = document.createTextNode(country.name);
+  optionNode.appendChild(textNode);
+  addressDropdown.appendChild(optionNode);
+}
+// set it's initial value
+addressDropdown.value = iti.getSelectedCountryData().iso2;
+
+// listen to the telephone input for changes
+input.addEventListener('countrychange', function(e) {
+  addressDropdown.value = iti.getSelectedCountryData().iso2;
+});
+
+// listen to the address dropdown for changes
+addressDropdown.addEventListener('change', function() {
+  iti.setCountry(this.value);
+});
+</script>
+
+    
+
+
 </x-slot>
 
 </x-app-layout>
