@@ -28,6 +28,23 @@ class MainController extends Controller
         }
         return view('client.index')->with('page_details', $home_settings)->with('locations', $locations)->with('blogs', $blogs)->with('first_blog', $first_blog);
     }
+
+    public function contact_us(){
+        $contact_settings = Cache::get('contact_settings', function () {
+            $page = FrontendPage::where('slug', 'contact-us')->first();
+            return $page;
+        });
+        return view('client.contact_us')->with('page_details', $contact_settings);
+    }
+
+    public function partners(){
+        $partner_settings = Cache::get('partner_settings', function () {
+            $page = FrontendPage::where('slug', 'partners')->first();
+            return $page;
+        });
+        return view('client.partners')->with('page_details', $partner_settings);
+    }
+
     public function test_mail()
     {
         $mail = new MailSettings;

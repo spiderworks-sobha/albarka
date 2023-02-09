@@ -168,7 +168,7 @@
                                                 <label>List</label>
                                                 <select name="section[listing_id_listing]" class="w-100 webadmin-select2-input">
                                                     @foreach($listings as $listing)
-                                                        <option value="{{$listing->id}}" @if(isset($data['delivery']['listing_id_listing']) && $data['delivery']['listing_id_listing'] == $listing->id) selected="selected" @endif>{{$listing->listing_name}}</option>
+                                                        <option value="{{$listing->id}}" @if(isset($data['delivery']['listing_id_listing']) && $data['delivery']['listing_id_listing']->id == $listing->id) selected="selected" @endif>{{$listing->listing_name}}</option>
                                                     @endforeach
                                                 </select>
                                             </div><!--end form-group-->

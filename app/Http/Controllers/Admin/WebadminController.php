@@ -64,6 +64,16 @@ class WebadminController extends Controller {
         }
     }
 
+    public function select2_listings(Request $request){
+        $items = DB::table('listings')->where('listing_name', 'like', $request->q.'%')->orderBy('listing_name')
+            ->get();
+        $json = [];
+        foreach($items as $c){
+            $json[] = ['id'=>$c->id, 'text'=>$c->listing_name];
+        }
+        return \Response::json($json);
+    }
+
     public function select2_faq(Request $request)
     {
         $items = DB::table('faqs')->where('name', 'like', $request->q.'%')->orderBy('name')

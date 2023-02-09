@@ -392,6 +392,7 @@
 
 <x-slot name="footer">
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="{{asset('html/js/home_contact.js')}}"></script>
     <script>
         $(document).ready(function(){
         $('.deliver-step-slider').slick({
@@ -425,23 +426,6 @@
         });
     </script>
 
-    <script>
-        $(".lg-hotspot").hover(
-            function() {
-                $(this).addClass("lg-hotspot--hover");
-            },
-            function() {
-                $(this).removeClass("lg-hotspot--hover");
-            }
-        );
-    </script>
-
-    <script>
-        $(document).on('click', 'body', function(e) {
-            $('.lg-hotspot').addClass("lg-hotspot--selected");
-            $('.lg-hotspot').removeClass('lg-hotspot--selected');
-        })
-    </script>
 
     <script>
 	

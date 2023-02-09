@@ -41,6 +41,7 @@ Route::group(['prefix' => $prefix, 'middleware' => ['web']], function () use($mi
 
     Route::get('validation/unique-slug', [WebadminController::class, 'unique_slug'])->name('admin.unique-slug');
     Route::get('/', [WebadminController::class, 'login'])->name('admin.login');
+    Route::get('select2/listings', [WebadminController::class, 'select2_listings'])->name('admin.select2.listing');
 
 	Route::group(['middleware' => $middleware], function(){
 		Route::get('/dashboard', [WebadminController::class, 'index'])->name('admin.dashboard');

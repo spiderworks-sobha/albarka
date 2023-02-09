@@ -47,5 +47,8 @@ Route::get('location/{slug}', [LocationController::class, 'details'])->name('loc
 
 Route::get('service', [ServiceController::class, 'index'])->name('service');
 
+Route::get('contact-us', [MainController::class, 'contact_us'])->name('contact-us');
+Route::get('partners', [MainController::class, 'partners'])->name('partners');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

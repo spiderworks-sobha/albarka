@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\BaseModel as Model;
 use App\Traits\ValidationTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Listing;
 
 class FrontendPage extends Model
 {
@@ -44,6 +45,12 @@ class FrontendPage extends Model
             if (strpos($key, 'media_id') !== false) {
                 if($item)
                     return Media::find((int)$item);
+                else
+                    return $item;
+            }
+            else if (strpos($key, 'listing_id') !== false) {
+                if($item)
+                    return Listing::with(['list', 'list.media'])->where('id', (int)$item)->first();
                 else
                     return $item;
             }
