@@ -11,27 +11,7 @@
 					</button>
 					<div class="collapse navbar-collapse" id="nav-bar">
 						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Link</a></li>
-									
-									<li><a href="#">Link</a></li>
-									<li><a href="#">Link</a></li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Enterprise</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Ideas</a>
-							</li>
+							<x-menu menu-name="Main Menu" />
 						</ul>
 					</div>
 		

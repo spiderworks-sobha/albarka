@@ -13,7 +13,7 @@
 	<div class="container container-width">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="home-banner-block" data-aos="fade-up"  data-aos-duration="500"
+				<div class="home-banner-block delivery-wrapper" data-aos="fade-up"  data-aos-duration="500"
 				data-aos-offset="0">
 					<div class="home-banner-text-block home-delivery-block" >
 						<div class="home-banner-text-block-text">
@@ -23,39 +23,7 @@
 	
 						</div>
 						
-						<div class="home-banner-selectbox" >
-							<label for="">Deliver my thing to</label>
-							<select name="sources" id="sources" class="custom-select sources" placeholder="Locations">
-								<option value="a">Qusais 2, Dubai</option>
-								<option value="b">Qusais 2, Dubai</option>
-								<option value="c">Qusais 2, Dubai</option>
-							</select>
-							<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.60976C0 3.40052 3.44628 0 7.68293 0C11.9196 0 15.3659 3.40052 15.3659 7.60976C15.3659 10.2277 13.8392 12.8115 12.2212 14.6923C11.4024 15.6441 10.5333 16.4476 9.76676 17.0191C9.3841 17.3043 9.0163 17.5398 8.68431 17.7069C8.37309 17.8637 8.01768 18 7.68293 18C7.34818 18 6.99277 17.8637 6.68154 17.7069C6.34956 17.5398 5.98176 17.3043 5.59909 17.0191C4.83253 16.4476 3.96347 15.6441 3.14468 14.6923C1.52668 12.8115 0 10.2277 0 7.60976ZM7.68293 9.87805C6.22813 9.87805 5.04878 8.6987 5.04878 7.2439C5.04878 5.7891 6.22813 4.60976 7.68293 4.60976C9.13772 4.60976 10.3171 5.7891 10.3171 7.2439C10.3171 8.6987 9.13772 9.87805 7.68293 9.87805Z" fill="#00D496"/>
-								</svg>
-								
-							
-						</div>
-						
-						<div class="selectbox-block">
-							<div class="home-banner-selectbox yourname" >
-								<label for="">Your Name</label>
-								<input type="text" placeholder="Your name">
-								<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.60976C0 3.40052 3.44628 0 7.68293 0C11.9196 0 15.3659 3.40052 15.3659 7.60976C15.3659 10.2277 13.8392 12.8115 12.2212 14.6923C11.4024 15.6441 10.5333 16.4476 9.76676 17.0191C9.3841 17.3043 9.0163 17.5398 8.68431 17.7069C8.37309 17.8637 8.01768 18 7.68293 18C7.34818 18 6.99277 17.8637 6.68154 17.7069C6.34956 17.5398 5.98176 17.3043 5.59909 17.0191C4.83253 16.4476 3.96347 15.6441 3.14468 14.6923C1.52668 12.8115 0 10.2277 0 7.60976ZM7.68293 9.87805C6.22813 9.87805 5.04878 8.6987 5.04878 7.2439C5.04878 5.7891 6.22813 4.60976 7.68293 4.60976C9.13772 4.60976 10.3171 5.7891 10.3171 7.2439C10.3171 8.6987 9.13772 9.87805 7.68293 9.87805Z" fill="#00D496"/>
-									</svg>
-							</div>
-
-							<div class="home-banner-selectbox yourphonenumber" >
-								<label for="">Your Phone Number</label>
-								<input placeholder="Your Phone Number" type="tel" id="phone" value="+91 ">
-
-							</div>
-
-
-						</div>
-
-						<button class="delivery-btn" >Deliver Now</button>
+						<x-location-form :locations="$locations" form="bannerForm" />
 
 					</div>
 					<div class="home-banner-img-block">
@@ -87,7 +55,7 @@
 
 							<div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12">
 								<div class="view-all-location-link">
-									<a href="#">View All Locations<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<a href="#" data-toggle="modal" data-target="#deliverypopup">Deliver Now<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M12 16L16 12L12 8" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 										<path d="M7 12L15 12" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
@@ -117,14 +85,14 @@
 										</div>
 										@endforeach
 										<div class="col featured-cities-block-container view-all-location">
-											<a href="#">
+											<a href="#" data-toggle="modal" data-target="#deliverypopup">
 												<div class="featured-cities-block-item view-all-btn-block">
 													<span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M12 16L16 12L12 8" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 														<path d="M7 12L15 12" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 														</svg>
 														</span>
-													<h4>View All Location</h4>
+													<h4>Deliver Now</h4>
 												</div>
 											</a>
 										</div>
@@ -250,51 +218,7 @@
 				<div class="contact-form-block-content">
 					<div class="row justify-content-center">
 						<div class="col-xl-6 col-md-8 col-sm-8 col-11">
-							<form class="contact-form-block" action="" >
-								<h4>{{$content['form_heading_4']}}</h4>
-		
-								<div class="form-input-block">
-									<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle r="3.2" transform="matrix(-1 0 0 1 5.60005 3.2)" fill="#0F0094"/>
-									<path d="M0 11.1477C0 10.4595 0.432683 9.84547 1.08087 9.61397C4.00323 8.57027 7.19677 8.57027 10.1191 9.61397C10.7673 9.84547 11.2 10.4595 11.2 11.1477V12.2001C11.2 13.1501 10.3586 13.8798 9.41823 13.7455L9.10469 13.7007C6.78003 13.3686 4.41997 13.3686 2.0953 13.7007L1.78177 13.7455C0.841363 13.8798 0 13.1501 0 12.2001V11.1477Z" fill="#0F0094"/>
-									</svg>
-									
-									<input type="text" placeholder="Your Name">
-								</div>
-		
-								<div class="form-input-block">
-									<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.18929C0 1.87561 1.87561 0 4.18929 0H11.475C13.7887 0 15.6643 1.87561 15.6643 4.18929V8.56071C15.6643 10.8744 13.7887 12.75 11.475 12.75H4.18929C1.87561 12.75 0 10.8744 0 8.56071V4.18929ZM3.76049 3.78929C3.53958 3.6236 3.22618 3.66837 3.06049 3.88929C2.89481 4.1102 2.93958 4.4236 3.16049 4.58929L6.33192 6.96786C7.22081 7.63452 8.44303 7.63452 9.33192 6.96786L12.5033 4.58929C12.7243 4.4236 12.769 4.1102 12.6033 3.88929C12.4377 3.66837 12.1243 3.6236 11.9033 3.78929L8.73192 6.16786C8.19859 6.56786 7.46525 6.56786 6.93192 6.16786L3.76049 3.78929Z" fill="#0F0094"/>
-									</svg>
-										
-									<input type="text" placeholder="Your Email">
-								</div>
-		
-		
-								<div class="form-input-block">
-										<input placeholder="Your Phone Number" type="tel" id="phone2" value="+91 ">
-								</div>
-		
-								<div class="form-input-block">										
-									<input type="tel" id="whatsappphone" placeholder="Whatsapp Number">
-								</div>
-		
-								<div class="form-input-block">
-									<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.4381C0 2.87695 2.91566 0 6.5 0C10.0843 0 13 2.87695 13 6.4381C13 8.65295 11.7084 10.8389 10.3395 12.4301C9.64678 13.2354 8.91153 13.9152 8.26299 14.3987C7.93924 14.64 7.62807 14.8392 7.3472 14.9806C7.0839 15.1132 6.78321 15.2286 6.5 15.2286C6.21679 15.2286 5.9161 15.1132 5.6528 14.9806C5.37193 14.8392 5.06076 14.64 4.73701 14.3987C4.08847 13.9152 3.35322 13.2354 2.6605 12.4301C1.29162 10.8389 0 8.65295 0 6.4381ZM6.50052 8.35631C5.26972 8.35631 4.27195 7.35855 4.27195 6.12774C4.27195 4.89694 5.26972 3.89917 6.50052 3.89917C7.73133 3.89917 8.7291 4.89694 8.7291 6.12774C8.7291 7.35855 7.73133 8.35631 6.50052 8.35631Z" fill="#0F0094"/>
-										</svg>
-										
-										
-										
-									<input type="text" placeholder="Location">
-								</div>
-		
-								<p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
-
-								<button class="submit-btn">Send message</button>
-		
-		
-							</form>
+							<x-contact-form :heading="$content['form_heading_4']" />
 						</div>
 					</div>
 				</div>
@@ -377,39 +301,103 @@
 
 <x-support />
 
+<div class="delivery-block fixed">
+			<div class="delivery-block-item">
+				<button class="delivery-btn- fixed"><img src="{{asset('html/img/delivery-icon.png')}}" alt=""></button>
+			</div>
+	
+			<div class="delivery-block-item-mobile">
+				<div class="delivery-block-item-mob-input">
+					
+
+					<div class="home-banner-selectbox" >
+						<label for="">Deliver my thing to</label>
+						<select name="sources" id="sources" class="custom-select sources" placeholder="Locations">
+							<option value="Qusais 2, Dubai">Qusais 2, Dubai</option>
+							<option value="Qusais 2, Dubai">Qusais 2, Dubai</option>
+							<option value="Qusais 2, Dubai">Qusais 2, Dubai</option>
+						</select>
+						<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.60976C0 3.40052 3.44628 0 7.68293 0C11.9196 0 15.3659 3.40052 15.3659 7.60976C15.3659 10.2277 13.8392 12.8115 12.2212 14.6923C11.4024 15.6441 10.5333 16.4476 9.76676 17.0191C9.3841 17.3043 9.0163 17.5398 8.68431 17.7069C8.37309 17.8637 8.01768 18 7.68293 18C7.34818 18 6.99277 17.8637 6.68154 17.7069C6.34956 17.5398 5.98176 17.3043 5.59909 17.0191C4.83253 16.4476 3.96347 15.6441 3.14468 14.6923C1.52668 12.8115 0 10.2277 0 7.60976ZM7.68293 9.87805C6.22813 9.87805 5.04878 8.6987 5.04878 7.2439C5.04878 5.7891 6.22813 4.60976 7.68293 4.60976C9.13772 4.60976 10.3171 5.7891 10.3171 7.2439C10.3171 8.6987 9.13772 9.87805 7.68293 9.87805Z" fill="#00D496"/>
+							</svg>
+					</div>
+
+
+				</div>
+
+				<button class="bl-btn-mob">DELIVER NOW</button>
+			</div>
+
+		</div>
+
+
+<div class="home-banner-text-block fixed delivery-wrapper">
+	<div class="dl-close">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+	</div>
+	<h1 >Do Hassle-Free <span>Courier Now!</span></h1>
+	<x-location-form :locations="$locations" form="footerForm" />
+</div>
+
+<!-- Modal -->
+<div class="modal right fade" id="deliverypopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				
+
+			<div class="modal-body">
+            <div class="popup-detail-block">
+
+            <div class="home-banner-text-block-text">
+							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
+
+						</div>
+                  <x-location-form :locations="[$location]" form="popupForm" :selected="$location->id" />
+            </div>
+
+			</div>
+
+		</div><!-- modal-content -->
+	</div><!-- modal-dialog -->
+</div><!-- modal -->
+
 <x-slot name="footer">
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="{{asset('html/js/home_contact.js')}}"></script>
     <script>
+		
         $(document).ready(function(){
-        $('.deliver-step-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            centerMode: true,
-            arrows: true,
-            dots: false,
-            speed: 800,
-            centerPadding: '0px',
-            infinite:true,
-            draggable: false,
-            autoplaySpeed: 2000,
-            focusOnSelect: true,
-            autoplay: true,
-            responsive: [
-        {
-            breakpoint: 991,
-            settings: {
-            slidesToShow: 3,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-            slidesToShow: 1,
-            }
-        }
-        ]
-        });
+			
+
+			$('.deliver-step-slider').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				centerMode: true,
+				arrows: true,
+				dots: false,
+				speed: 800,
+				centerPadding: '0px',
+				infinite:true,
+				draggable: false,
+				autoplaySpeed: 2000,
+				focusOnSelect: true,
+				autoplay: true,
+				responsive: [
+					{
+						breakpoint: 991,
+						settings: {
+						slidesToShow: 3,
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+						slidesToShow: 1,
+						}
+					}
+				]
+			});
         });
     </script>
 
@@ -434,117 +422,17 @@
     
     
     <script>
-    jQuery(document).ready(function(){
-        jQuery('.home-delivery-block .custom-select-wrapper').click(function(event){
-            jQuery('.home-delivery-block .selectbox-block').removeClass('active');
-            jQuery('.home-delivery-block .selectbox-block').addClass('active');
-            jQuery('.home-delivery-block .home-banner-text-block-text').removeClass('active');
-            jQuery('.home-delivery-block .home-banner-text-block-text').addClass('active');
-    
-    
-            event.preventDefault();
-        });
-    });
+		$(function(){
+			$(document).on('click', '.delivery-wrapper .custom-select-wrapper', function(){
+				$(this).parents('.delivery-wrapper').find('.selectbox-block').removeClass('active');
+				$(this).parents('.delivery-wrapper').find('.selectbox-block').addClass('active');
+            	$(this).parents('.delivery-wrapper').find('.home-banner-text-block-text').removeClass('active');
+				$(this).parents('.delivery-wrapper').find('.home-banner-text-block-text').addClass('active');
+				$(this).parents('form').find('button').prop('disabled', false);
+			})
+		})
+
     </script>
-    
-    
-    <script>
-        jQuery(document).ready(function(){
-            jQuery('.fixed .custom-select-wrapper').click(function(event){
-                jQuery('.fixed .selectbox-block').removeClass('active');
-                jQuery('.fixed .selectbox-block').addClass('active');
-                
-        
-        
-                event.preventDefault();
-            });
-        });
-        </script>
-
-
-
-
-
-<script>
-  
-// International telephone format
-// $("#phone").intlTelInput();
-// get the country data from the plugin
-var countryData = window.intlTelInputGlobals.getCountryData(),
-  input = document.querySelector("#phone2"),
-  addressDropdown = document.querySelector("#address-country");
-
-// init plugin
-var iti = window.intlTelInput(input, {
-  hiddenInput: "full_phone",
-  utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js?1549804213570" // just for formatting/placeholders etc
-});
-
-// populate the country dropdown
-for (var i = 0; i < countryData.length; i++) {
-  var country = countryData[i];
-  var optionNode = document.createElement("option");
-  optionNode.value = country.iso2;
-  var textNode = document.createTextNode(country.name);
-  optionNode.appendChild(textNode);
-  addressDropdown.appendChild(optionNode);
-}
-// set it's initial value
-addressDropdown.value = iti.getSelectedCountryData().iso2;
-
-// listen to the telephone input for changes
-input.addEventListener('countrychange', function(e) {
-  addressDropdown.value = iti.getSelectedCountryData().iso2;
-});
-
-// listen to the address dropdown for changes
-addressDropdown.addEventListener('change', function() {
-  iti.setCountry(this.value);
-});
-</script>
-
-
-
-<script>
-  
-// International telephone format
-// $("#phone").intlTelInput();
-// get the country data from the plugin
-var countryData = window.intlTelInputGlobals.getCountryData(),
-  input = document.querySelector("#whatsappphone"),
-  addressDropdown = document.querySelector("#address-country");
-
-// init plugin
-var iti = window.intlTelInput(input, {
-  hiddenInput: "full_phone",
-  utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js?1549804213570" // just for formatting/placeholders etc
-});
-
-// populate the country dropdown
-for (var i = 0; i < countryData.length; i++) {
-  var country = countryData[i];
-  var optionNode = document.createElement("option");
-  optionNode.value = country.iso2;
-  var textNode = document.createTextNode(country.name);
-  optionNode.appendChild(textNode);
-  addressDropdown.appendChild(optionNode);
-}
-// set it's initial value
-addressDropdown.value = iti.getSelectedCountryData().iso2;
-
-// listen to the telephone input for changes
-input.addEventListener('countrychange', function(e) {
-  addressDropdown.value = iti.getSelectedCountryData().iso2;
-});
-
-// listen to the address dropdown for changes
-addressDropdown.addEventListener('change', function() {
-  iti.setCountry(this.value);
-});
-</script>
-
-    
-
 
 </x-slot>
 

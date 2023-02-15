@@ -6,7 +6,7 @@ use App\Models\BaseModel as Model;
 use App\Traits\ValidationTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Lead extends Model
+class PartnerLead extends Model
 {
     use SoftDeletes;
 	use ValidationTrait {
@@ -19,10 +19,10 @@ class Lead extends Model
         $this->__validationConstruct();
     }
 
-    protected $table = 'leads';
+    protected $table = 'partner_leads';
 
 
-    protected $fillable = array('name', 'email', 'location', 'phone_number', 'message', 'extra_data', 'lead_type', 'utm_source', 'source_url', 'ip_address', 'user_agent', 'referrer_link', 'remarks', 'status');
+    protected $fillable = array('name', 'email', 'address', 'phone_number', 'contact_person_role', 'shop_type', 'no_of_shops', 'utm_source', 'source_url', 'ip_address', 'user_agent', 'referrer_link', 'remarks', 'status');
 
     protected $dates = ['created_at','updated_at'];
 

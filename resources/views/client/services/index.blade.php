@@ -67,7 +67,7 @@
                         <h5 class="faq-title">{{$service->title}}</h5>
                     </div>
 					<i class="ri-arrow-right-s-line"></i>
-                    <a href="#" class="btn-fill">Deliver Now</a>
+                    <a href="#" class="btn-fill" data-toggle="modal" data-target="#deliverypopup">Deliver Now</a>
                 </div>
                 <div id="faqCollapse-{{$key}}" class="collapse @if($key == 0) show @endif" aria-labelledby="faqHeading-{{$key}}" data-parent="#service-accordion">
                     <div class="card-body">
@@ -89,6 +89,29 @@
 
 </div>
 </section>
+
+<!-- Modal -->
+<div class="modal right fade" id="deliverypopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				
+
+			<div class="modal-body">
+            <div class="popup-detail-block">
+
+            <div class="home-banner-text-block-text">
+							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
+
+						</div>
+                  <x-location-form form="popupForm" />
+            </div>
+
+			</div>
+
+		</div><!-- modal-content -->
+	</div><!-- modal-dialog -->
+</div><!-- modal -->
 
 <x-slot name="footer">
 </x-slot>

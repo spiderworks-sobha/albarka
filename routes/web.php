@@ -50,5 +50,12 @@ Route::get('service', [ServiceController::class, 'index'])->name('service');
 Route::get('contact-us', [MainController::class, 'contact_us'])->name('contact-us');
 Route::get('partners', [MainController::class, 'partners'])->name('partners');
 
+Route::get('/thankyou', function () {
+    return view('client.thankyou');
+})->name('thankyou');
+
+Route::post('contact/save', [MainController::class, 'contact_save'])->name('contact.save');
+Route::post('partner/save', [MainController::class, 'partner_save'])->name('partner.save');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

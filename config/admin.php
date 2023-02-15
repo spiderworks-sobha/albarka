@@ -18,13 +18,13 @@ return array(
 				'identifier' => 'frontend_pages',
 				'model' => 'App\Models\FrontendPage',
 			],
-			'services'=>[
-				'title' => 'Services',
-				'identifier' => 'services',
-				'model' => 'App\Models\Service',
+			'locations'=>[
+				'title' => 'Locations',
+				'identifier' => 'locations',
+				'model' => 'App\Models\Location',
 			]
 		],
-		'positions'=>['Main Menu', 'Footer Menu'],
+		'positions'=>['Main Menu', 'Footer Menu', 'Bottom Menu'],
 	],
 
 	'category_types' => ['Blog', 'Event'],

@@ -18,7 +18,9 @@
         <div class="container container-width">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
-                    <form class="contact-form-block">
+                <form class="contact-form-block" action="{{url('partner/save')}}" method="POST" id="partnerForm">
+                    @csrf
+                    <input type="hidden" name="source_url" value="{{url()->full()}}" />
                         <h2>{{$content['title_1']}}</h2>
                         
 
@@ -27,52 +29,56 @@
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="form-input-block">
                                         <label for="">Your Name</label>
-                                        <input type="text" placeholder="Enter Your name" class="input-form">
+                                        <input type="text" placeholder="Enter Your name" name="name" class="input-form">
+                                        <span class="name_partner_error"></span>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-8">
                                     <div class="form-input-block">
                                         <label for="">Shop Type</label>
-                                        <input type="text" placeholder="Shop Type" class="input-form">
+                                        <input type="text" placeholder="Shop Type" name="shop_type" class="input-form">
                                     </div>
                                 </div>
 
                                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4">
                                     <div class="form-input-block">
                                         <label for="">Number of Shops</label>
-                                        <input type="text" placeholder="Number of Shops" class="input-form">
+                                        <input type="number" placeholder="Number of Shops" name="no_of_shops" class="input-form">
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <div class="form-input-block">
                                         <label for="">Phone Number</label>
-                                        <input type="text" placeholder="Phone Number" class="input-form">
+                                        <input type="text" placeholder="Phone Number" name="phone_number" class="input-form phone" value="+91 ">
+                                        <span class="phone_number_partner_error"></span>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <div class="form-input-block">
                                         <label for="">Email</label>
-                                        <input type="text" placeholder="Email" class="input-form">
+                                        <input type="text" placeholder="Email" name="email" class="input-form">
+                                        <span class="email_partner_error"></span>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="form-input-block">
                                         <label for="">Address</label>
-                                        <textarea type="text" placeholder="Address" class="input-form"></textarea>
+                                        <textarea type="text" placeholder="Address" name="address" class="input-form"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="form-input-block">
                                         <label for="">Contact Person’s Role</label>
-                                        <input type="text" placeholder="Contact Person’s Role" class="input-form">
+                                        <input type="text" placeholder="Contact Person’s Role" name="contact_person_role" class="input-form">
                                     </div>
                                 </div>
-
+                                <input type="hidden" name="recaptcha" >
+								<p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
                                 <div class="col-md-12">
                                     <div class="input-group">
                                         <button class="submit-btn">Submit</button>
@@ -133,7 +139,7 @@
                                 <h2>{!! $content['title_3'] !!}</h2>
                                 <div class="title-btn-group">
                                     <a href="{{url('contact-us')}}" class="btn-fill">Contact Us</a>
-                                    <a href="#" class="btn-border">Deliver Now</a>
+                                    <a href="#" class="btn-border" data-toggle="modal" data-target="#deliverypopup">Deliver Now</a>
                                 </div>
 
                             </div>
@@ -174,9 +180,109 @@
     </div>
 </section>
 
+<!-- Modal -->
+<div class="modal right fade" id="deliverypopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				
+
+			<div class="modal-body">
+            <div class="popup-detail-block">
+
+            <div class="home-banner-text-block-text">
+							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
+
+						</div>
+                  <x-location-form form="popupForm" />
+            </div>
+
+			</div>
+
+		</div><!-- modal-content -->
+	</div><!-- modal-dialog -->
+</div><!-- modal -->
+
 
 
 <x-slot name="footer">
+    <script src="https://www.google.com/recaptcha/api.js?render={{config('services.google_recaptcha.site_key')}}"></script>
+    <script>
+        grecaptcha.ready(function() {
+                get_recaptcha();
+            });
+
+    jQuery.validator.addMethod("phonenum", function(value, element) {
+        if (value == '')
+            return true;
+        var regexPattern = new RegExp(/^[0-9-+ ]+$/);
+        if (value.length >= 8 && value.length <= 15) {
+            if (regexPattern.test(value)) {
+                return true;
+            } else {
+                return false;
+            };
+        } else
+            return false;
+    }, "Invalid phone number");
+
+    $("#partnerForm").validate({
+        rules:
+        {
+            name: "required",
+            phone_number: {
+                required: true,
+                phonenum: true,
+            },
+            email: {
+                email: true,
+            },
+        },
+        messages:
+        {
+            name: "Please enter your name",
+            phone_number: {
+                required: "Please enter your phone number",
+            },
+        },
+        submitHandler:function(form)
+        {
+            var button = $(form).find('button');
+            var button_text = button.html();
+            button.prop('disabled', true).html('Processing...');
+            var formurl = $(form).attr('action');
+                $.ajax({
+                    url: formurl ,
+                    type: "POST", 
+                    data: new FormData($(form)[0]),
+                    cache: false, 
+                    processData: false,
+                    contentType: false, 
+                    success: function(data) {
+                        button.prop('disabled', false).html(button_text);
+                        if (typeof data.errors != "undefined") {
+                            var errors = JSON.parse(JSON.stringify(data.errors))
+                                $.each(errors, function (key, val) {
+                                    $(form).find("."+key+"_partner_error").html(val);
+                                });
+                        }
+                        else
+                        {
+                            location.href=base_url+"/thankyou";  
+                        }
+                    },
+                    error:function(xhr){
+                        button.prop('disabled', false).html(button_text);
+                        var errors = $.parseJSON(xhr.responseText);
+                        $.each(errors, function (key, val) {
+                            $(form).find("."+key+"_partner_error").html(val);
+                        });
+                        get_recaptcha();
+                    }
+                });
+        }
+    });
+    </script>
 </x-slot>
 
 </x-app-layout>

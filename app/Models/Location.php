@@ -114,7 +114,7 @@ class Location extends Model
             foreach ($array as $key => $item) {
                 if($item->parent_id == $currentParent){
                     
-                    $html .= '<div class="checkbox">'.$indent.'<input type="checkbox" name="locations_links[]" class="locations_links" value="locations_links-'.$item->id.'" data-id="'.$item->id.'" data-name="'.$item->name.'" id="locations-'.$item->id.'"> <label for="locations-'.$item->id.'">'.$item->name.'</label></div>';
+                    $html .= '<div class="checkbox">'.$indent.'<input type="checkbox" name="locations_links[]" class="locations_links" value="locations_link-'.$item->id.'" data-id="'.$item->id.'" data-name="'.$item->name.'" id="locations-'.$item->id.'"> <label for="locations-'.$item->id.'">'.$item->name.'</label></div>';
                         
                     if($item->children)
                     {
