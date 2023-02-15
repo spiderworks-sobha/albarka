@@ -162,6 +162,29 @@
 </section>
 @endif
 <x-slot name="footer">
+
+
+<script>
+
+	$(document).ready(function() {
+		var s = $(".we-social-share");
+		var pos = s.position();					   
+		$(window).scroll(function() {
+			var windowpos = $(window).scrollTop();
+			if (windowpos >= pos.top & windowpos <=2000) {
+				s.addClass("show-share-this");
+			} else {
+				s.removeClass("show-share-this");	
+			}
+		});
+	});
+
+</script>
 </x-slot>
+
+
+
+
+
 
 </x-app-layout>
