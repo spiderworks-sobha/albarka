@@ -31,6 +31,7 @@ use App\Http\Controllers\Admin\JobApplicationController;
 use App\Http\Controllers\Admin\ListingController;
 use App\Http\Controllers\Admin\ListigItemController;
 use App\Http\Controllers\Admin\LocationController;
+use App\Http\Controllers\Admin\PartnerLeadController;
 
 $prefix = (config()->has('admin.url_prefix'))?config()->get('admin.url_prefix'):'admin';
 $middleware = (config()->has('admin.admin_middleware'))?config()->get('admin.admin_middleware'):'auth';
@@ -292,6 +293,21 @@ Route::group(['prefix' => $prefix, 'middleware' => ['web']], function () use($mi
         Route::get('leads/change-status/{id}', [LeadController::class, 'changeStatus'])->name('admin.leads.change-status');
         Route::get('leads/show/{id}', [LeadController::class, 'show'])->name('admin.leads.show');
         Route::get('leads/export',[LeadController::class,'export'])->name('admin.leads.export');
+
+        //partner leads
+        Route::get('partner-leads', [PartnerLeadController::class, 'index'])->name('admin.partner-leads.index');
+        Route::get('partner-leads/create', function(){
+            echo "Not possible";exit;
+        })->name('admin.partner-leads.create');
+        Route::get('partner-leads/edit/{id}', [PartnerLeadController::class, 'edit'])->name('admin.partner-leads.edit');
+        Route::get('partner-leads/destroy/{id}', [PartnerLeadController::class, 'destroy'])->name('admin.partner-leads.destroy');    
+        Route::post('partner-leads/store', function(){
+            echo "Not possible";exit;
+        })->name('admin.partner-leads.store');
+        Route::post('partner-leads/update', [PartnerLeadController::class, 'update'])->name('admin.partner-leads.update');
+        Route::get('partner-leads/change-status/{id}', [PartnerLeadController::class, 'changeStatus'])->name('admin.partner-leads.change-status');
+        Route::get('partner-leads/show/{id}', [PartnerLeadController::class, 'show'])->name('admin.partner-leads.show');
+
 
         //redirects
         Route::get('redirects', [RedirectController::class, 'index'])->name('admin.redirects.index');

@@ -14,6 +14,7 @@ use App\Traits\ClientInfoTrait;
 use App\Models\Lead as Contact;
 use App\Models\Setting;
 use App\Models\PartnerLead;
+use App\Models\Page;
 use Validator;
 
 class MainController extends Controller
@@ -174,6 +175,14 @@ class MainController extends Controller
             return $page;
         });
         return view('client.partners')->with('page_details', $partner_settings);
+    }
+
+    public function view_page($slug)
+    {
+        $page = Page::where('slug', $slug)->where('status', 1)->first();
+        if(!$page)
+            return abort('404');
+        return view('client.dynamic_page')->with('page_details', $page);
     }
 
     public function test_mail()

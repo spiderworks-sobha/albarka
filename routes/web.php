@@ -57,5 +57,20 @@ Route::get('/thankyou', function () {
 Route::post('contact/save', [MainController::class, 'contact_save'])->name('contact.save');
 Route::post('partner/save', [MainController::class, 'partner_save'])->name('partner.save');
 
+Route::get('company/{slug}', [MainController::class, 'view_page'])->name('view-page');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
+
+Route::get('{slug?}', function(Illuminate\Http\Request $request, $slug){
+    $from_url = str_replace(url('/').'/', '', $request->fullUrl());
+    $check_redirect = \DB::table('redirects')->where('redirect_from', $from_url)->first();
+    if($check_redirect)
+    {
+        if($check_redirect->redirect_to == '')
+            return Redirect::to(url('/'), 301);
+        else
+            return Redirect::to(url($check_redirect->redirect_to), 301);
+    }
+    return abort('404');
+})->where('slug', '(.*)')->name('redirects');

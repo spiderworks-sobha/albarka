@@ -22,7 +22,7 @@
 @elseif($menu_name == 'Bottom Menu')
     <ul>
     @foreach($bottom_menu_items as $item)
-        <li><a href="{{url('/'.$item->code)}}" @if($item->target_blank == 1) target="_blank" @endif>{{$item->title}}</a></li>
+        <li><a href="{{$item->slug}}" @if($item->target_blank == 1) target="_blank" @endif>{{$item->title}}</a></li>
     @endforeach
     </ul>
 @endif
