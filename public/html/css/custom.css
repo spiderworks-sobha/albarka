@@ -396,6 +396,7 @@ button.delivery-btn:hover{
   opacity: 0;
   visibility: hidden;
   transform: translate(0px, 140px);
+  z-index: 10;
 }
 
 .delivery-block.fixed button.delivery-btn {
@@ -433,6 +434,7 @@ button.delivery-btn-.fixed img {
   transition: .25s;
   padding: 25px;
   min-height: 330px;
+  z-index: 11;
 }
 
 .dl-close {
