@@ -178,6 +178,7 @@
                                             <div class="card">
                                                 <div class="card-header">
                                                     User Image
+                                                    <span class="text-danger float-right" style="font-weight: normal; font-size: 12px;">Image Size: 400px X 300px</span>
                                                 </div>
                                                 <div class="card-body">
                                                     @include('admin.media.set_file', ['file'=>$obj->featured_image, 'title'=>'User Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'featured_image_id'])

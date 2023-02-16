@@ -222,6 +222,7 @@
                                             <div class="card">
                                                 <div class="card-header">
                                                     Featured Image
+                                                    <span class="text-danger float-right" style="font-weight: normal; font-size: 12px;">Image Size: 310px X 280px</span>
                                                 </div>
                                                 <div class="card-body">
                                                     @include('admin.media.set_file', ['file'=>$obj->featured_image, 'title'=>'Featured Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'featured_image_id'])
@@ -230,6 +231,7 @@
                                             <div class="card">
                                                 <div class="card-header">
                                                     Banner Image
+                                                    <span class="text-danger float-right" style="font-weight: normal; font-size: 12px;">Image Size: 651px X 300px</span>
                                                 </div>
                                                 <div class="card-body">
                                                     @include('admin.media.set_file', ['file'=>$obj->banner_image, 'title'=>'Banner Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'banner_image_id'])
