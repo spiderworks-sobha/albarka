@@ -306,7 +306,7 @@
 				<button class="delivery-btn- fixed"><img src="{{asset('html/img/delivery-icon.png')}}" alt=""></button>
 			</div>
 	
-			<div class="delivery-block-item-mobile">
+			<!-- <div class="delivery-block-item-mobile">
 				<div class="delivery-block-item-mob-input">
 					
 
@@ -326,7 +326,7 @@
 				</div>
 
 				<button class="bl-btn-mob">DELIVER NOW</button>
-			</div>
+			</div> -->
 
 		</div>
 
