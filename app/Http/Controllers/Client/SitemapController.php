@@ -8,16 +8,19 @@ use DB;
 
 class SitemapController extends Controller
 {
-    public function index()
+    public function index(){
+        return response()->view('client.sitemaps.index')->header('Content-Type', 'text/xml');
+    }
+    public function static_pages()
     {
-        $items = DB::table('frontend_pages')->whereNotIn('slug', ['university.view'])->get();
-        return response()->view('client.sitemaps.index', ['items'=>$items])->header('Content-Type', 'text/xml');
+        $items = DB::table('frontend_pages')->whereNotIn('slug', ['location'])->get();
+        return response()->view('client.sitemaps.static_pages', ['items'=>$items])->header('Content-Type', 'text/xml');
     }
     
-    public function services()
+    public function locations()
     {
-        $items = DB::table('services')->select('slug')->where('status', 1)->get();
-        return response()->view('client.sitemaps.services', ['items'=>$items])->header('Content-Type', 'text/xml');
+        $items = DB::table('locations')->select('slug')->where('status', 1)->get();
+        return response()->view('client.sitemaps.locations', ['items'=>$items])->header('Content-Type', 'text/xml');
     }
     
     public function blogs()

@@ -80,7 +80,7 @@
                                     
                                     <span class="sep">|</span>
                                     
-                                    <span class="read-time"><i class="flaticon-time"></i>18 min read</span>
+                                    <span class="read-time"><i class="flaticon-time"></i>{{BladeHelper::extimatedReadTime(strip_tags($blog->content))}}</span>
                                 </div>
                             </div>
                         </div>
@@ -99,9 +99,7 @@
 											<li class="share-twitter"><a href="http://twitter.com/share?url={{Request::url()}}&text={{$blog->title}}" target="_blank"><span tabindex="0" data-link="#share-twitter" class="share-link"><i class="fa fa-twitter"></i></span></a></li> 
 											
 											<li class="share-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url={{Request::url()}}" target="_blank"><span tabindex="0" data-link="#share-linkedin" class="share-link"><i class="fa fa-linkedin"></i></span></a></li> 
-											
-											<li class="share-whatsapp"><a href="whatsapp://send?text={{Request::url()}}" data-action="share/whatsapp/share"><span tabindex="0" data-link="#share-whatsapp" class="share-link"><i class="fa fa-whatsapp"></i></span></a></li> 
-										
+																					
 										</ul>
 									</div>
 								</div>

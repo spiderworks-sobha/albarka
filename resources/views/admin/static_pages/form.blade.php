@@ -82,14 +82,18 @@
                                                                 <label class="">Route (for url)</label>
                                                                 <input type="text" name="slug" class="form-control" value="{{$obj->slug}}" id="slug" readonly="">
                                                             </div>
+                                                            @if(!in_array($obj->slug, ['partners', 'index']))
                                                             <div class="form-group col-md-6">
                                                                 <label>Title</label>
                                                                 <input type="text" name="title" class="form-control" value="{{$obj->title}}" required="">
                                                             </div>
+                                                            @endif
+                                                            @if(!in_array($obj->slug, ['partners', 'index']))
                                                             <div class="form-group col-md-6">
                                                                 <label>Sub Title</label>
                                                                 <input type="text" name="sub_title" class="form-control" value="{{$obj->sub_title}}" >
                                                             </div>
+                                                            @endif
                                                         </div>
                                                     </div>                                           
                                                 </div><!--end card-body-->
@@ -195,20 +199,22 @@
                                                     </div>
                                                 </div>
                                                 <div class="card-footer text-muted">
-                                                    <a href="" class="btn btn-sm btn-soft-primary">Preview</a>
                                                     <button class="btn btn-sm btn-primary float-right">Save</button>
                                                 </div>
                                             </div>
-                                            @if($obj->id)
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    FAQ
+                                            @if(!in_array($obj->slug, ['partners', 'contact-us', 'service', 'blog']))
+                                                @if($obj->id)
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        FAQ
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <a href="{{route('admin.faq.index', [$obj->id, 'FrontendPage'])}}" class="webadmin-open-ajax-popup btn btn-sm btn-warning" title="SET FAQ" data-popup-size="large">@if(count($obj->faq)>0) Update FAQ @else Add FAQ @endif</a>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body text-center">
-                                                    <a href="{{route('admin.faq.index', [$obj->id, 'FrontendPage'])}}" class="webadmin-open-ajax-popup btn btn-sm btn-warning" title="SET FAQ" data-popup-size="large">@if(count($obj->faq)>0) Update FAQ @else Add FAQ @endif</a>
-                                                </div>
-                                            </div>
+                                                @endif
                                             @endif
+                                            @if(!in_array($obj->slug, ['partners', 'contact-us', 'service', 'blog', 'index']))
                                             <div class="card">
                                                 <div class="card-header">
                                                     Featured Image
@@ -217,6 +223,8 @@
                                                     @include('admin.media.set_file', ['file'=>$obj->featured_image, 'title'=>'Featured Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'featured_image_id'])
                                                 </div>
                                             </div>
+                                            @endif
+                                            @if(!in_array($obj->slug, ['partners', 'contact-us', 'service', 'blog', 'index']))
                                             <div class="card">
                                                 <div class="card-header">
                                                     Banner Image
@@ -225,6 +233,7 @@
                                                     @include('admin.media.set_file', ['file'=>$obj->banner_image, 'title'=>'Banner Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'banner_image_id'])
                                                 </div>
                                             </div>
+                                            @endif
                                             <div class="card">
                                                 <div class="card-header">
                                                     OG Image

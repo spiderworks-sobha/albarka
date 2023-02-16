@@ -13,6 +13,7 @@ class LocationController extends Controller
    
     public function index()
     {
+        return abort('404');
         $location_settings = Cache::get('location_settings', function () {
             $page = FrontendPage::where('slug', 'location')->first();
             return $page;

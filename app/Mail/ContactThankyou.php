@@ -30,6 +30,6 @@ class ContactThankyou extends Mailable
      */
     public function build()
     {
-        return $this->subject('Arbah Support')->view('email.contact_thankyou');
+        return $this->subject('Albarka Support')->view('email.contact_thankyou');
     }
 }

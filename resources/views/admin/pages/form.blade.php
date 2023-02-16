@@ -93,10 +93,6 @@
                                                                 </select>
                                                             </div>
                                                             <div class="form-group col-md-12">
-                                                                <label>Short Description</label>
-                                                                <textarea name="short_description" class="form-control" rows="2" id="short_description">{{$obj->short_description}}</textarea>
-                                                            </div>
-                                                            <div class="form-group col-md-12">
                                                                 <label>Content</label>
                                                                 <textarea name="content" class="form-control editor" id="content">{{$obj->content}}</textarea>
                                                             </div>
@@ -159,10 +155,6 @@
                                                                 <input type="checkbox" class="custom-control-input" value="1" id="status" name="status" @if(!$obj->id || $obj->status == 1) checked="" @endif>
                                                                 <label class="custom-control-label" for="status">Status</label>
                                                             </div>
-                                                            <div class="custom-control custom-switch switch-primary float-right">
-                                                                <input type="checkbox" class="custom-control-input" value="1" id="is_featured" name="is_featured" @if($obj->is_featured == 1) checked="checked" @endif>
-                                                                <label class="custom-control-label" for="is_featured">Featured</label>
-                                                            </div>
                                                         </div>
                                                         <div class="form-group w-100 mb-1">
                                                             <label for="name">Created On: </label>
@@ -202,32 +194,7 @@
                                                     <button class="btn btn-sm btn-primary float-right">Save</button>
                                                 </div>
                                             </div>
-                                            @if($obj->id)
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    FAQ
-                                                </div>
-                                                <div class="card-body text-center">
-                                                    <a href="{{route('admin.faq.index', [$obj->id, 'Page'])}}" class="webadmin-open-ajax-popup btn btn-sm btn-warning" title="SET FAQ" data-popup-size="large">@if(count($obj->faq)>0) Update FAQ @else Add FAQ @endif</a>
-                                                </div>
-                                            </div>
-                                            @endif
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    Featured Image
-                                                </div>
-                                                <div class="card-body">
-                                                    @include('admin.media.set_file', ['file'=>$obj->featured_image, 'title'=>'Featured Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'featured_image_id'])
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    Banner Image
-                                                </div>
-                                                <div class="card-body">
-                                                    @include('admin.media.set_file', ['file'=>$obj->banner_image, 'title'=>'Banner Image', 'popup_type'=>'single_image', 'type'=>'Image', 'holder_attr'=>'banner_image_id'])
-                                                </div>
-                                            </div>
+                                            
                                             <div class="card">
                                                 <div class="card-header">
                                                     OG Image

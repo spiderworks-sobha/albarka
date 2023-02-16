@@ -114,7 +114,7 @@ class MainController extends Controller
         } 
         if($support->email){
             $thank_mail = new MailSettings;
-            //$thank_mail->to($support->email)->send(new \App\Mail\ContactThankyou($support));
+            $thank_mail->to($support->email)->send(new \App\Mail\ContactThankyou($support));
         }
         return response()->json(['success'=>true]);
     }
@@ -160,11 +160,11 @@ class MainController extends Controller
                 return !is_null($value) && $value !== '';
              });
             $email_array = array_map('trim', $email_array);
-            $mail->to($email_array)->send(new \App\Mail\Contact($support));
+            $mail->to($email_array)->send(new \App\Mail\Partner($support));
         } 
         if($support->email){
             $thank_mail = new MailSettings;
-            //$thank_mail->to($support->email)->send(new \App\Mail\ContactThankyou($support));
+            $thank_mail->to($support->email)->send(new \App\Mail\ContactThankyou($support));
         }
         return response()->json(['success'=>true]);
     }

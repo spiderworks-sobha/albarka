@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Arabah</title>
+      <title>Albarka</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
             </div>
             @section('content')
             @show
-            <div style=" padding: 25px; margin: 30px 30px 0; background-color: #c90; color: #fff; text-align: center; ">
+            <div style=" padding: 25px; margin: 30px 30px 0; background-color: #21A9E1; color: #fff; text-align: center; ">
                <div>
                   <a href="{{url('/')}}" style="display: inline-block; border: 1px dashed #fff; padding:5px 10px ; color:#fff; font-size: 14px;  text-decoration: none;">
                     {{url('/')}}

@@ -192,7 +192,7 @@
                                                     <button class="btn btn-sm btn-primary float-right">Save</button>
                                                 </div>
                                             </div>
-                                            <div class="card">
+                                            {{--<div class="card">
                                                 <div class="card-header">
                                                     Category
                                                 </div>
@@ -218,7 +218,7 @@
                                                     <a href="{{route('admin.faq.index', [$obj->id, 'Blog'])}}" class="webadmin-open-ajax-popup btn btn-sm btn-warning" title="SET FAQ" data-popup-size="large">@if(count($obj->faq)>0) Update FAQ @else Add FAQ @endif</a>
                                                 </div>
                                             </div>
-                                            @endif
+                                            @endif --}}
                                             <div class="card">
                                                 <div class="card-header">
                                                     Featured Image

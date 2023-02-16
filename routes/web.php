@@ -35,7 +35,8 @@ Route::get('/dashboard', function () {
 
 Route::group(['prefix' => 'sitemap'], function(){
     Route::get('/', [SitemapController::class, 'index'])->name('sitemap.index');
-    Route::get('/services', [SitemapController::class, 'services'])->name('sitemap.services');
+    Route::get('/static-pages', [SitemapController::class, 'static_pages'])->name('sitemap.static-pages');
+    Route::get('/locations', [SitemapController::class, 'locations'])->name('sitemap.locations');
     Route::get('/blogs', [SitemapController::class, 'blogs'])->name('sitemap.blogs');
 });
 
