@@ -29,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         Validator::extend('recaptcha', 'App\\Validators\\ReCaptcha@validate');
+        if (env('APP_ENV') !== 'local') {
+            URL::forceScheme('https');
+        }
         $common_settings = Cache::get('settings', function () {
             $data = [];
             if(Schema::hasTable('settings'))
