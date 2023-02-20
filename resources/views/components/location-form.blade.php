@@ -4,7 +4,7 @@
 							  <input type="hidden" name="lead_type" value="Delivery" />
     <div class="home-banner-selectbox" >
 							<label for="">Deliver my thing to</label>
-							<select name="location" class="custom-select sources" placeholder="Locations">
+							<select name="location" class="custom-select sources" placeholder="Location">
                                 @foreach($locations as $location)
 								    <option value="{{$location->id}}" @if($selected == $location->id) selected="selected" @endif>{{$location->name}}</option>
                                 @endforeach
@@ -36,5 +36,5 @@
 
 						</div>
 						<input type="hidden" name="recaptcha" >
-						<button class="delivery-btn" @if($form != 'popupForm') disabled @endif >Deliver Now</button>
+						<button class="delivery-btn" @if($form != 'popupForm') disabled @endif >{{ $common_settings['location_popup_button'] }}</button>
 </form>
