@@ -353,7 +353,7 @@
 							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
 
 						</div>
-                  <x-location-form :locations="[$location]" form="popupForm" :selected="$location->id" />
+                  <x-location-form :locations="$locations" form="popupForm" />
             </div>
 
 			</div>
