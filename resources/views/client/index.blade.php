@@ -139,7 +139,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_1'] !!}</h2>
-								<image :image="$content['media_id_3_1']" />
+								<x-image :image="$content['media_id_3_1']" />
 							</div>
 							<p>{!! nl2br($content['description_3_1']) !!}</p>
 						</div>
@@ -150,7 +150,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_2'] !!}</h2>
-								<image :image="$content['media_id_3_2']" />
+								<x-image :image="$content['media_id_3_2']" />
 							</div>
 							<p>{!! nl2br($content['description_3_2']) !!}</p>
 						</div>
@@ -161,7 +161,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_3'] !!}</h2>
-								<image :image="$content['media_id_3_3']" />
+								<x-image :image="$content['media_id_3_3']" />
 							</div>
 							<p>{!! nl2br($content['description_3_3']) !!}</p>
 						</div>
@@ -172,7 +172,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_4'] !!}</h2>
-								<image :image="$content['media_id_3_4']" />
+								<x-image :image="$content['media_id_3_4']" />
 							</div>
 							<p>{!! nl2br($content['description_3_4']) !!}</p>
 						</div>
