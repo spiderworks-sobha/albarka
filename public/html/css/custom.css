@@ -542,7 +542,10 @@ button.delivery-btn-.fixed img {
 section#home-delivery-steps-section {
   margin-top: 100px;
   text-align: center;
+  min-height: 750px;
 }
+
+
 .section-title-center span {
   font-style: normal;
   font-weight: 500;
@@ -729,7 +732,7 @@ section#home-delivery-steps-section {
   background: linear-gradient(102.61deg, #FFFBF8 13.58%, #FFE0C5 106.52%);
   padding-top: 40px;
   position: relative;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .contact-section-title-block {
   display: flex;
@@ -2604,6 +2607,12 @@ section#blog-details-section {
     margin: 0px auto;
     margin-right: 0;
   }
+
+  section#home-delivery-steps-section {
+    min-height: auto;
+  }
+
+
 
 }
 
