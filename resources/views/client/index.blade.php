@@ -55,7 +55,7 @@
 
 							<div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12">
 								<div class="view-all-location-link">
-									<a href="#" data-toggle="modal" data-target="#deliverypopup">Deliver Now<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<a href="#" data-toggle="modal" data-target="#deliverypopup">{{ $common_settings['location_popup_button'] }}<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M12 16L16 12L12 8" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 										<path d="M7 12L15 12" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
@@ -92,7 +92,7 @@
 														<path d="M7 12L15 12" stroke="#0F0094" stroke-linecap="round" stroke-linejoin="round"/>
 														</svg>
 														</span>
-													<h4>Deliver Now</h4>
+													<h4>{{ $common_settings['location_popup_button'] }}</h4>
 												</div>
 											</a>
 										</div>
@@ -139,7 +139,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_1'] !!}</h2>
-								<image :image="$content['media_id_3_1']" />
+								<x-image :image="$content['media_id_3_1']" />
 							</div>
 							<p>{!! nl2br($content['description_3_1']) !!}</p>
 						</div>
@@ -150,7 +150,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_2'] !!}</h2>
-								<image :image="$content['media_id_3_2']" />
+								<x-image :image="$content['media_id_3_2']" />
 							</div>
 							<p>{!! nl2br($content['description_3_2']) !!}</p>
 						</div>
@@ -161,7 +161,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_3'] !!}</h2>
-								<image :image="$content['media_id_3_3']" />
+								<x-image :image="$content['media_id_3_3']" />
 							</div>
 							<p>{!! nl2br($content['description_3_3']) !!}</p>
 						</div>
@@ -172,7 +172,7 @@
 							</div>
 							<div class="step-title-block">
 								<h2>{!! $content['title_3_4'] !!}</h2>
-								<image :image="$content['media_id_3_4']" />
+								<x-image :image="$content['media_id_3_4']" />
 							</div>
 							<p>{!! nl2br($content['description_3_4']) !!}</p>
 						</div>
@@ -335,7 +335,7 @@
 	<div class="dl-close">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
 	</div>
-	<h1 >Do Hassle-Free <span>Courier Now!</span></h1>
+	<h1 >{!!$common_settings['location_popup_heading']!!}</h1>
 	<x-location-form :locations="$locations" form="footerForm" />
 </div>
 
@@ -350,10 +350,10 @@
             <div class="popup-detail-block">
 
             <div class="home-banner-text-block-text">
-							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
+							<h3>{!!$common_settings['location_popup_heading']!!}</h3>
 
 						</div>
-                  <x-location-form :locations="[$location]" form="popupForm" :selected="$location->id" />
+                  <x-location-form :locations="$locations" form="popupForm" />
             </div>
 
 			</div>

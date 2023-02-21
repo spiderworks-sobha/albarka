@@ -52,7 +52,7 @@
                     {!! $location->content !!}
                     <div class="title-btn-group">
                         <a href="{{url('contact-us')}}" class="btn-fill">Contact Us</a>
-                        <a href="#" class="btn-border" data-toggle="modal" data-target="#deliverypopup">Deliver Now</a>
+                        <a href="#" class="btn-border" data-toggle="modal" data-target="#deliverypopup">{{ $common_settings['location_popup_button'] }}</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
             <div class="popup-detail-block">
 
             <div class="home-banner-text-block-text">
-							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
+							<h3>{!!$common_settings['location_popup_heading']!!}</h3>
 
 						</div>
                   <x-location-form :locations="[$location]" form="popupForm" :selected="$location->id" />

@@ -67,7 +67,7 @@
                         <h5 class="faq-title">{{$service->title}}</h5>
                     </div>
 					<i class="ri-arrow-right-s-line"></i>
-                    <a href="#" class="btn-fill" data-toggle="modal" data-target="#deliverypopup">Deliver Now</a>
+                    <a href="#" class="btn-fill" data-toggle="modal" data-target="#deliverypopup">{{ $common_settings['location_popup_button'] }}</a>
                 </div>
                 <div id="faqCollapse-{{$key}}" class="collapse @if($key == 0) show @endif" aria-labelledby="faqHeading-{{$key}}" data-parent="#service-accordion">
                     <div class="card-body">
@@ -101,7 +101,7 @@
             <div class="popup-detail-block">
 
             <div class="home-banner-text-block-text">
-							<h3>Do Hassle-Free <span>Courier Now!</span></h3>
+							<h3>{!!$common_settings['location_popup_heading']!!}</h3>
 
 						</div>
                   <x-location-form form="popupForm" />
