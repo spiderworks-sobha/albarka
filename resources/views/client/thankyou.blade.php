@@ -3,6 +3,12 @@
 </x-slot>
 <x-slot name="header">
 
+
+<style>
+    .thankyou-page-content-block h1 {
+        font-size: 2rem;
+    }
+</style>
 </x-slot>
 
 <section id="altair-404-section">
