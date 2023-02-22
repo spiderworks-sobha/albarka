@@ -37,7 +37,7 @@
                                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-8">
                                     <div class="form-input-block">
                                         <label for="">Shop Type</label>
-                                        <input type="text" placeholder="Shop Type" name="shop_type" class="input-form">
+                                        <input type="text" placeholder="Shop Types (e.g: supermarkets, convenience stores and more)" name="shop_type" class="input-form">
                                     </div>
                                 </div>
 
@@ -74,7 +74,7 @@
                                 <div class="col-md-12">
                                     <div class="form-input-block">
                                         <label for="">Contact Person’s Role</label>
-                                        <input type="text" placeholder="Contact Person’s Role" name="contact_person_role" class="input-form">
+                                        <input type="text" placeholder="Contact Person’s Role (e.g: Managing Director, Marketing Manager, and more)" name="contact_person_role" class="input-form">
                                     </div>
                                 </div>
                                 <input type="hidden" name="recaptcha" >
