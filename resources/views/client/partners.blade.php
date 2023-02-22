@@ -34,14 +34,14 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-8">
+                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
                                     <div class="form-input-block">
                                         <label for="">Shop Type</label>
                                         <input type="text" placeholder="Shop Types (e.g: supermarkets, convenience stores and more)" name="shop_type" class="input-form">
                                     </div>
                                 </div>
 
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                                     <div class="form-input-block">
                                         <label for="">Number of Shops</label>
                                         <input type="number" placeholder="Number of Shops" name="no_of_shops" class="input-form">
