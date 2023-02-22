@@ -3,6 +3,12 @@
 </x-slot>
 <x-slot name="header">
 
+
+<style>
+    .thankyou-page-content-block h1 {
+        font-size: 2rem;
+    }
+</style>
 </x-slot>
 
 <section id="altair-404-section">
@@ -10,8 +16,8 @@
     <div class="row dir-clm align-items-center justify-content-between">
     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
     <div class="thankyou-page-content-block">
-    <h1>Thank you!</h1>
-    <p>You request has been successfully sumbited, we will get back to you soon. </p>
+    <h1>Thanks for connecting with us.</h1>
+    <p>Your request has been submitted. We would revert at the earliest. </p>
     <div class="thankyou-btn-group">
         <div class="not-page-content-btn-">
             <a href="{{url('/')}}">
