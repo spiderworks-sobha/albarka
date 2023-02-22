@@ -51,7 +51,7 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <div class="form-input-block">
                                         <label for="">Phone Number</label>
-                                        <input type="text" placeholder="Phone Number" name="phone_number" class="input-form phone" value="+91 ">
+                                        <input type="text" placeholder="Phone Number" name="phone_number" class="input-form phone" value="+971 ">
                                         <span class="phone_number_partner_error"></span>
                                     </div>
                                 </div>

@@ -24,12 +24,12 @@
 		
 		
 								<div class="form-input-block">
-										<input placeholder="Your Phone Number" type="tel"  value="+91 " name="phone_number" class="phone">
+										<input placeholder="Your Phone Number" type="tel"  value="+971 " name="phone_number" class="phone">
                                         <span class="phone_number_contact_error"></span>
 								</div>
 		
 								<div class="form-input-block">										
-									<input type="tel"  placeholder="Whatsapp Number" name="whatsapp" value="+91 " class="phone">
+									<input type="tel"  placeholder="Whatsapp Number" name="whatsapp" value="+971 " class="phone">
 								</div>
 		
 								<div class="form-input-block">

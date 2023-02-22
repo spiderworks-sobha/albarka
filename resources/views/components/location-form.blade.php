@@ -29,7 +29,7 @@
 
 							<div class="home-banner-selectbox yourphonenumber" >
 								<label for="">Your Phone Number</label>
-								<input placeholder="Your Phone Number" type="tel" name="phone_number" value="+91 " class="phone">
+								<input placeholder="Your Phone Number" type="tel" name="phone_number" value="+971 " class="phone">
                                 <span class="phone_number_location_error"></span>
 							</div>
 
