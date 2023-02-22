@@ -246,7 +246,7 @@
                                                     FAQ
                                                 </div>
                                                 <div class="card-body text-center">
-                                                    <a href="{{route('admin.faq.index', [$obj->id, 'Service'])}}" class="webadmin-open-ajax-popup btn btn-sm btn-warning" title="SET FAQ" data-popup-size="large">@if(count($obj->faq)>0) Update FAQ @else Add FAQ @endif</a>
+                                                    <a href="{{route('admin.faq.index', [$obj->id, 'Location'])}}" class="webadmin-open-ajax-popup btn btn-sm btn-warning" title="SET FAQ" data-popup-size="large">@if(count($obj->faq)>0) Update FAQ @else Add FAQ @endif</a>
                                                 </div>
                                             </div>
                                             @endif
