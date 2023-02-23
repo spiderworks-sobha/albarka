@@ -94,7 +94,28 @@
 
 <x-location-map />
 
+<!-- Modal -->
+<div class="modal right fade" id="deliverypopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				
 
+			<div class="modal-body">
+            <div class="popup-detail-block">
+
+            <div class="home-banner-text-block-text">
+							<h3>{!!$common_settings['location_popup_heading']!!}</h3>
+
+						</div>
+                  <x-location-form form="popupForm" />
+            </div>
+
+			</div>
+
+		</div><!-- modal-content -->
+	</div><!-- modal-dialog -->
+</div><!-- modal -->
 
 <x-slot name="footer">
 <script src="{{asset('html/js/home_contact.js')}}"></script>
