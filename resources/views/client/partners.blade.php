@@ -37,7 +37,7 @@
                                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
                                     <div class="form-input-block">
                                         <label for="">Shop Type</label>
-                                        <input type="text" placeholder="Shop Types (e.g: supermarkets, convenience stores and more)" name="shop_type" class="input-form">
+                                        <input type="text" placeholder="Shop Types(e.g:supermarket,electrical shop,and more)" name="shop_type" class="input-form">
                                     </div>
                                 </div>
 
