@@ -3502,6 +3502,14 @@ section#footer-link--text-section {
   color: #9F9F9F;
 }
 
+.footer-link--text-block h4{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+  color: #9F9F9F;
+}
+
 .footer-link--text-block ul {
   list-style: disc;
 }
