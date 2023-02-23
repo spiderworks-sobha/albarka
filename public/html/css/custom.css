@@ -3497,17 +3497,17 @@ section#footer-link--text-section {
 .footer-link--text-block h2 {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
-  color: #626262;
+  color: #212529;
 }
 
 .footer-link--text-block h4{
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 28px;
-  color: #626262;
+  color: #212529;
 }
 
 .footer-link--text-block ul {
