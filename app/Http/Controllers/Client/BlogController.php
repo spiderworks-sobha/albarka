@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Client\BaseController as Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Models\FrontendPage;
@@ -33,7 +33,7 @@ class BlogController extends Controller
             return view('client.blogs.details', [ 'blog'=>$blog, 'latest_blogs'=>$latest_blogs]);
         }
         else
-            return abort('404');
+            return $this->_404();
     }
 
 }

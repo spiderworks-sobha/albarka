@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Client\BaseController as Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Models\FrontendPage;
@@ -31,7 +31,7 @@ class LocationController extends Controller
             return view('client.locations.details', [ 'location'=>$location]);
         }
         else
-            abort('404');
+            return $this->_404();
     }
 
 }
