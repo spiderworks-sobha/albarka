@@ -70,12 +70,12 @@ trait ClientInfoTrait {
         //we will have two since we are not using 'other' argument yet
         //see if version is before or after the name
         if (strripos($u_agent,"Version") < strripos($u_agent,$ub)){
-            $version= $matches['version'][0];
+            $version= (!empty($matches['version'][0]))?$matches['version'][0]:0;
         }else {
-            $version= $matches['version'][1];
+            $version= (!empty($matches['version'][1]))?$matches['version'][1]:0;
         }
       }else {
-        $version= $matches['version'][0];
+        $version= (!empty($matches['version'][0]))?$matches['version'][0]:0;
       }
     
       // check if we have a number
