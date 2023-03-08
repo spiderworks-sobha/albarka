@@ -1540,6 +1540,15 @@ footer {
 @media (max-width:1300px) {
 
 
+  ul.navbar-nav {
+    padding-left: 0px;
+}
+
+ul.navbar-nav li a {
+  padding: 0 10px !important;
+}
+
+
   .home-banner-text-block {
     padding: 30px 40px 30px 0;
   }
@@ -1669,15 +1678,6 @@ footer {
 }
 
 
-
-  header.active {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: #fff;
-  }
-
   .navbar-collapse {
     overflow: hidden;
     width: 100%;
@@ -1686,8 +1686,12 @@ footer {
     padding: 30px 0;
   }
   ul.navbar-nav {
-    padding-left: 40px;
+    padding-left: 0px;
   }
+  ul.navbar-nav li {
+    padding: 6px 0;
+}
+
 
   button.navbar-toggler.collapsed {
     background-color: #1E195C;
@@ -1737,12 +1741,19 @@ footer {
   .cta-img-block img {
     position: relative;
   }
-
-  .footer-logo{
+  .footer-logo {
     margin-bottom: 20px;
-  }
+    text-align: center;
+}
   .faq-block {
     padding: 40px 20px;
+}
+
+.footer-link ul {
+  gap: 20px;
+  grid-gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
 }
 
 
@@ -1934,6 +1945,10 @@ section#footer-link-section {
 }
 .footer-link ul {
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  grid-gap: 10px;
 }
 
 
@@ -1995,18 +2010,6 @@ button.bl-btn-mob {
     width: 48%;
     flex-basis: 48%;
   }
-
-  .footer-link ul li a {
-    font-size: 10px;
-    font-weight: 400;
-}
-.footer-link ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-  grid-gap: 20px;
-}
 
 
 

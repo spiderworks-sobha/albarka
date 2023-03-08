@@ -15,13 +15,13 @@
 			<div class="col-md-12">
 				<div class="footer-bottom-block">
 					<div class="row">
-						<div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-12">
+						<div class="col-xl-2 col-lg-2 col-md-3 col-sm-12 col-12">
 							<div class="footer-logo">
 								<img src="{{asset($common_settings['logo_small'])}}" alt="Albarka">
 							</div>
 						</div>
 
-						<div class="col-xl-10 col-lg-10 col-md-9 col-sm-8 col-12">
+						<div class="col-xl-10 col-lg-10 col-md-9 col-sm-12 col-12">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="footer-link">
